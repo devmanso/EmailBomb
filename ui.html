@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>EmailBomb GUI 1.0</h1>
+    <h2>Author: devmanso</h2>
+    <h2>Date of last mod: Oct 30 2023 (10/30/23)</h2>
+    <button type="button" class="button" value="Butt" id="butt">Run</button>
+    <input type="text" id="email" name="email" required minlength="4" maxlength="50" size="10" />
+    <label for="email">Email address</label>
+    <script>
+      document.getElementById("butt").onclick = function () {
+        alertMe();
+      };
+
+      // function alertMe() {
+      //   // TODO: check if email is valid
+      //   var email_add = document.getElementById("email").value;
+      //   alert(email_add);
+      //   google.script.run.withSuccessHandler(function(result) {
+      //     // handle success if needed
+      //     console.log("SUCCESS ON INIT")
+      //   }).withFailureHandler(function(error) {
+      //     alert("ERROR ON INIT")
+      //   }).init(email_add);
+
+      //   google.script.run.withSuccessHandler(function(result) {
+      //     // handle success if needed
+      //     console.log("SUCCESS ON MAIN")
+      //   }).withFailureHandler(function(error) {
+      //     alert("ERROR ON MAIN")
+      //   }).main();
+
+      // }
+
+    function alertMe() {
+      // TODO: check if email is valid
+      var email_add = document.getElementById("email").value;
+      alert(email_add);
+
+      // Call 'main' using withSuccessHandler
+      google.script.run.withSuccessHandler(function (result) {
+        // handle success if needed
+        console.log("SUCCESS ON MAIN");
+      }).withFailureHandler(function (error) {
+        alert("ERROR ON MAIN");
+      }).main(email_add);
+    }
+
+  //   function alertMe() {
+  //     // TODO: check if email is valid
+  //     var email_add = document.getElementById("email").value;
+  //     alert(email_add);
+
+  //     // Call 'init' and then 'main'
+  //     google.script.run.withSuccessHandler(function (result) {
+  //     // handle success if needed
+  //     console.log("SUCCESS ON INIT");
+
+  //     // Call 'main' without passing any parameters
+  //     google.script.run.withSuccessHandler(function (result) {
+  //       // handle success if needed
+  //       console.log("SUCCESS ON MAIN");
+  //     }).withFailureHandler(function (error) {
+  //       alert("ERROR ON MAIN");
+  //     }).main();
+  //     }).withFailureHandler(function (error) {
+  //     alert("ERROR ON INIT");
+  //     }).init(email_add);
+  // }
+
+    </script>
+  </body>
+</html>
