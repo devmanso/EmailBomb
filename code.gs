@@ -1,7 +1,7 @@
 // Author: devmanso
 // Date of last mod: Oct 30 2023 (10/30/23)
 
-const ITERATIONS = 5 // be sure to abide by the email quota
+const ITERATIONS = 100 // be sure to abide by the email quota
 const WAIT = 1000 // msec
 var counter = 0
 var debugStatements = true
